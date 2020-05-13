@@ -82,8 +82,20 @@ namespace ComputationalThinkingExercises
             Console.Clear();
             Console.WriteLine("ARE THESE INTEGERS EQUAL?\n");
 
-            // Enter your solution here
+            Console.WriteLine("Enter an integer, Please.");
+            string integerOne = Console.ReadLine();
+            Console.WriteLine("Enter a second integer");
+                
+            string integerTwo = Console.ReadLine();
 
+            if (integerOne.Equals(integerTwo)) { 
+            
+                Console.WriteLine("the integers are equal!");
+            }
+            else
+            {
+                Console.WriteLine("the integers are not equal!");
+            }
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -96,10 +108,20 @@ namespace ComputationalThinkingExercises
             Console.Clear();
             Console.WriteLine("EVEN OR ODD?\n");
 
-            // Enter your solution here
-
-            Console.Write("Press enter to return to the Main Menu");
-            Console.ReadLine();
+            Console.WriteLine("Enter a number.");
+            string integer = Console.ReadLine();
+            int number = Convert.ToInt32(integer);
+            bool isEven = number % 2 == 0;
+            
+            if (isEven)
+            {
+                Console.Write("The number is even");
+            }
+            else
+            {
+                Console.WriteLine("The number is odd");
+            }
+            Console.ReadLine().ToLower();
         }
 
         static void VowelOrConsonant()
@@ -110,7 +132,19 @@ namespace ComputationalThinkingExercises
             Console.Clear();
             Console.WriteLine("VOWEL OR CONSONANT?\n");
 
-            // Enter your solution here
+            Console.WriteLine("Is your letter a vowel");
+            string letter = Console.ReadLine();
+            string vowel = "a e i o u";
+            bool aVowel = vowel.Contains(letter);
+            Console.WriteLine(aVowel);
+            if(aVowel)
+            {
+                Console.WriteLine("The Letter is a Vowel!");
+            }
+            else
+            {
+                Console.WriteLine("The Letter is not a Vowel");
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();

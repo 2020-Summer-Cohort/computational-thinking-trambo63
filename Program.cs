@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks.Dataflow;
 
 namespace ComputationalThinkingExercises
 {
@@ -136,7 +137,7 @@ namespace ComputationalThinkingExercises
             string letter = Console.ReadLine();
             string vowel = "a e i o u";
             bool aVowel = vowel.Contains(letter);
-            Console.WriteLine(aVowel);
+            //Console.WriteLine(aVowel);
             if(aVowel)
             {
                 Console.WriteLine("The Letter is a Vowel!");
@@ -158,7 +159,21 @@ namespace ComputationalThinkingExercises
             Console.Clear();
             Console.WriteLine("FIND THE LARGEST NUMBER\n");
 
-            // Enter your solution here
+            Console.WriteLine("Type any number");
+            string number1 = Console.ReadLine();
+            int one = Convert.ToInt32(number1);
+            Console.WriteLine("Type another number");
+            string number2 = Console.ReadLine();
+            int two = Convert.ToInt32(number2);
+
+            if (one > two)
+            {
+                Console.WriteLine("The frist number is greater");
+            }
+            else
+            {
+                Console.WriteLine("The Second number is greater");
+            }
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
@@ -171,8 +186,18 @@ namespace ComputationalThinkingExercises
             Console.Clear();
             Console.WriteLine("DIVISIBLE BY 3\n");
 
-            // Enter your solution here
+            Console.WriteLine("Type any Number");
+            string number = Console.ReadLine();
+            int one = Convert.ToInt32(number);
 
+            if (one % 3 == 0)
+            {
+                Console.WriteLine("This number is divisible by 3! :)");
+            }
+            else
+            {
+                Console.WriteLine("This number is not divisible by 3. :(");
+            }
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
@@ -192,7 +217,26 @@ namespace ComputationalThinkingExercises
             Console.Clear();
             Console.WriteLine("RESTAURANT BILL\n");
 
-            // Enter your solution here
+            Console.WriteLine("Enter number of diners");
+            string number = Console.ReadLine();
+            double diners = Convert.ToDouble(number);
+            Console.WriteLine("What was the bill");
+            string number2 = Console.ReadLine();
+            double bill = Convert.ToDouble(number2);
+            
+            
+            if (bill >= 50)
+            {
+                Console.WriteLine(bill - (bill * .10));
+                Console.WriteLine("Total Bill");
+
+            }
+            else
+            {
+                Console.WriteLine(bill - (bill * .05));
+                Console.WriteLine("Total Bill");
+            }
+                
 
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();

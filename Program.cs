@@ -294,14 +294,11 @@ namespace ComputationalThinkingExercises
             {
                 Console.WriteLine("Dying soon");
             }
-            if (age < 0)
+            if (age < 0 || age > 100)
             {
                 Console.WriteLine("This program is for humans only!");
             }
-            if (age > 100)
-            {
-                Console.WriteLine("This program is for humans only!");
-            }
+            
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }

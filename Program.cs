@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks.Dataflow;
+using System.Transactions;
 
 namespace ComputationalThinkingExercises
 {
@@ -217,10 +218,10 @@ namespace ComputationalThinkingExercises
             Console.Clear();
             Console.WriteLine("RESTAURANT BILL\n");
 
-            Console.WriteLine("Enter number of diners");
+            Console.WriteLine("Enter number of diners\n");
             string number = Console.ReadLine();
             double diners = Convert.ToDouble(number);
-            Console.WriteLine("What was the bill");
+            Console.WriteLine("What was the bill\n");
             string number2 = Console.ReadLine();
             double bill = Convert.ToDouble(number2);
             
@@ -262,8 +263,45 @@ namespace ComputationalThinkingExercises
             Console.Clear();
             Console.WriteLine("AGE CATEGORY\n");
 
-            // Enter your solution here
-
+            Console.WriteLine("Enter Age");
+            string num = Console.ReadLine();
+            int age = Convert.ToInt32(num);
+            if (age >= 0 && age <= 2)
+            {
+                Console.WriteLine("Still in mama's arm's");
+            }
+            if (age >= 5 && age <= 11)
+            {
+                Console.WriteLine("Elemetry");
+            }
+            if (age >= 12 && age <= 14)
+            {
+                Console.WriteLine("Middle");
+            }
+            if (age >= 15 && age <= 18)
+            {
+                Console.WriteLine("High");
+            }
+            if (age >= 19 && age <= 22)
+            {
+                Console.WriteLine("College");
+            }
+            if (age >= 23 && age <= 65)
+            {
+                Console.WriteLine("Working");
+            }
+            if (age >= 66 && age <= 100)
+            {
+                Console.WriteLine("Dying soon");
+            }
+            if (age < 0)
+            {
+                Console.WriteLine("This program is for humans only!");
+            }
+            if (age > 100)
+            {
+                Console.WriteLine("This program is for humans only!");
+            }
             Console.Write("Press enter to return to the Main Menu");
             Console.ReadLine();
         }
